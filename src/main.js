@@ -1,37 +1,9 @@
 import "./reset.css";
-import "./app1.css";
+import "./global.css";
+
+import "./app1.js";
+import "./app2.js";
+import "./app3.js";
+import "./app4.js";
+
 // ? 我咋这儿写了, 没有效果呢? 原来是要用 parcel 才行
-import $ from "jquery";
-
-const $button1 = $("#add1");
-const $button2 = $("#minus1");
-const $button3 = $("#mul2");
-const $button4 = $("#divide2");
-const $number = $("#number");
-let n = localStorage.getItem("n");
-$number.text(n || 100);
-
-$button1.on("click", () => {
-  let n = parseInt($number.text());
-  n += 1;
-  localStorage.setItem("n", n);
-  $number.text(n);
-});
-$button2.on("click", () => {
-  let n = parseInt($number.text());
-  n -= 1;
-  localStorage.setItem("n", n);
-  $number.text(n);
-});
-$button3.on("click", () => {
-  let n = parseInt($number.text());
-  n *= 2;
-  localStorage.setItem("n", n);
-  $number.text(n);
-});
-$button4.on("click", () => {
-  let n = parseInt($number.text());
-  n /= 2;
-  localStorage.setItem("n", n);
-  $number.text(n);
-});
